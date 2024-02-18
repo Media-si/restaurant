@@ -79,7 +79,7 @@
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <button class="btn btn-hover">+1 (700) - 22 -31</button>
+        <button onclick="myFunction()"class="btn btn-hover">+1 (700) - 22 -31</button>
 
         <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
           <span class="line top"></span>
@@ -1307,6 +1307,23 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+
+  </script>
 
 </body>
 
